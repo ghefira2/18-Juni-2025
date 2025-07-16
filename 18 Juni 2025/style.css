@@ -1,0 +1,76 @@
+nav {
+    background: linear-gradient(90deg, #a86f3b, #a96669, #b28785);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #25242f;
+    cursor: pointer;
+}
+
+.logo:hover, .navbar-brand:hover {
+    color: #ead13f;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #a86f3b;
+    text-shadow: 1px 2px 2px #da9e65;
+}
+
+.nav-link {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ead13f;
+}
+
+
+.hero {
+    background: linear-gradient(90deg, #a86f3b, #a96669, #b28785);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 20px 60px;
+    text-align: center;
+}
+
+#navbar-placeholder, #content-placeholder,
+#packages-placeholder {
+    display: block;
+    transition: opacity 0.5s ease;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.carousel-inner img {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+}

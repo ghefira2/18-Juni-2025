@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us | JourneyTrip</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <style>
+        .toast-custom {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light"
+        style="background: linear-gradient(90deg, #a86f3b, #a96669, #b28785);">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="JourneyTrip.html">JourneyTrip</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Form Section -->
+    <section class="container my-5">
+        <h1 class="mb-4 text-center">Contact Us</h1>
+        <p class="text-center mb-5">Have questions or want to book your trip? Send us a message!</p>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form onsubmit="event.preventDefault(); showToast();">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Your full name" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="you@example.com" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" class="form-control" rows="5" placeholder="Write your message here..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-danger text-dark w-100">Send Message</button>
+
+                    <!-- Toast Notification -->
+                    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+                        <div id="liveToast" class="toast align-items-center text-white bg-success border-0" role="alert"
+                            aria-live="assertive" aria-atomic="true">
+                            <div class="d-flex">
+                                <div class="toast-body">
+                                    Your message was sent successfully!
+                                </div>
+                                <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                                    data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <hr class="my-5" />
+
+        <!-- Contact Info -->
+        <div class="row text-center">
+            <div class="col-md-4 mb-3">
+                <h5>📍 Address</h5>
+                <p>Jl. Ciehts No.13, East Java, Indonesia</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>📞 Phone</h5>
+                <p>+62 812 3467 7820</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>✉️ Email</h5>
+                <p>yourtrip@journeytrip.com</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="text-white py-4" style="background-color: #b28785;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-md-start text-center mb-3 mb-md-0">
+                    <h5 class="fw-bold" style="color: #f7edac;">JourneyTrip</h5>
+                    <p class="mb-0">Your trusted travel partner for unforgettable adventures.</p>
+                </div>
+                <div class="col-md-6 text-md-end text-center">
+                    <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-envelope-fill"></i></a>
+                    <p class="mb-0 mt-2" style="font-size: 0.9rem;">&copy; 2025 JourneyTrip. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showToast() {
+            const toastEl = document.getElementById('liveToast');
+            const toast = new bootstrap.Toast(toastEl);
+            toast.show();
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
